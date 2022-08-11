@@ -4,7 +4,7 @@ This package comtains functions to perform survival anaylsis using standard and 
 Currently, we have methods for:
 
 - **Window Mean Survival Time** with `wmst()`, based on the work of Paukner et al. (2021) 
-- **Versatile WMST** with `combo()`, based on the work of Paukner et al. (2021)
+- **Versatile WMST** with `combo()`, based on the work of Paukner et al. (2022)
 
 
 
@@ -12,3 +12,4 @@ Currently, we have methods for:
 ## References 
 
 Paukner, Mitchell, and Richard Chappell. "Window mean survival time." Statistics in Medicine (2021).
+Paukner, Mitchell, and Richard Chappell. "Versatile Tests for Windoiw Mean Survival Time." Statistics in Medicine (2022).
