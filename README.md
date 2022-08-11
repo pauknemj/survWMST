@@ -12,4 +12,5 @@ Currently, we have methods for:
 ## References 
 
 Paukner, Mitchell, and Richard Chappell. "Window mean survival time." Statistics in Medicine (2021).
+
 Paukner, Mitchell, and Richard Chappell. "Versatile Tests for Windoiw Mean Survival Time." Statistics in Medicine (2022).
