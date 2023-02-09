@@ -1,5 +1,6 @@
 #' @name combo
 #' @aliases wmst2
+#' @import mvtnorm
 #' @title Comparing window mean survival time
 #' @description Performs two-sample comparisons using the window mean survival time (WMST) as a summary measure of the survival time distribution.
 #' Three kinds of between-group contrast metrics (i.e., the difference in WMST, the ratio of WMST and the ratio of the window mean time lost (WMTL)) are computed.
