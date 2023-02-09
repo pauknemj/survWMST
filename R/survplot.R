@@ -1,6 +1,6 @@
 #' Plots two survival distributions.
 #'
-#'
+#' @import ggplot2
 #' @param survdefC the survival distribution of the control group (will be
 #' plotted as a solid line), as a list in the form output by `survdef`.
 #' @param survdefT the survival distribution of the control group (will be

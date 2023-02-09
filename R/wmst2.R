@@ -5,6 +5,7 @@
 #' Three kinds of between-group contrast metrics (i.e., the difference in WMST, the ratio of WMST and the ratio of the window mean time lost (WMTL)) are computed.
 #' The Greenwood plug-in estimator is used for the asymptotic variance. 
 #' @usage  wmst(time, status, arm, tau0 = NULL, tau1 = NULL, alternative = "two.sided", alpha = 0.05)
+#' @import survival
 #' @param time The follow-up time for right censored data.
 #' @param status The status indicator, 1=event, and 0=right censored.
 #' @param arm The group indicator for comparison. The elements of this vector take either 1 or 0. Normally, 0=control group, 1=active treatment group.
@@ -25,21 +26,7 @@
 #' @references Note to self: figure out what to place here! (Definitely give Hajime Uno, Lu Tian, Miki Horiguchi, Angel Cronin, Chakib Battioui, James Bell credit)
 #'
 #' @author Mitchell Paukner
-#' @examples
-#' #--- sample data ---#
-#' D=wmst2_sample_data()
-#' time=D$time
-#' status=D$status
-#' arm=D$arm
-#' tau=NULL
-#' x=D[,c(4,6,7)]
-#' #--- without covariates ----
-#' a=rmst2(time, status, arm, tau=10)
-#' print(a)
-#' plot(a, xlab="Years", ylab="Probability", density=60)
-#' #--- with covariates ----
-#' a=rmst2(time, status, arm, tau=10, covariates=x)
-#' print(a)
+
 
 
 #'@export

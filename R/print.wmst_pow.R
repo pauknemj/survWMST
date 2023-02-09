@@ -23,14 +23,15 @@ print.pow=function(x, digits=5, ...){
   if(x$indicator == "power"){
     
     cat("The total required sample size: \n")
-    print(x$n)
+    print(x$n0 + x$n1)
     
     cat("\n")
     
-    cat(paste0("The actual asymptotic power estimate based on a sample size of ", x$n,": \n"))
+    cat(paste0("The actual asymptotic power estimate based on a sample size of ", x$n0,"  
+               in the control arm and ", x$n1," in the treatment arm",": \n"))
     print(x$power)
     
-  } else if(x$indicator == "n"){
+  } else if(x$indicator == "n0 + n1"){
     
     cat("The power of the test: \n")
     print(x$power)
@@ -38,7 +39,7 @@ print.pow=function(x, digits=5, ...){
   }
   
   
-
+  
   invisible(x)
 }
 NULL
