@@ -23,11 +23,11 @@ wmst_pow(survC, survT, censor = NA, eperiod, end_study, tau0, tau1, n = NA, powe
 \item{tau1}{A scaler value to specify the upper truncation time point of the window for the WMST calculation.
 \code{tau1} needs to be smaller than the minimum of the largest observed time in each of the two groups. When \code{tau1 = NULL}, the default value (i.e., the minimum of the largest observed time in each of the two groups) is used.}
 
-\item{n}{The total sample size for both groups. 1:1 randomization is assumed.}
+\item{n0}{The total sample size in control group.}
+
+\item{n1}{The total sample size in treatment group.}
 
 \item{power}{The desired power of the test.}
-
-\item{plot}{If TRUE, plots of the assumed survival distribution and power as a function of sample size are produced.}
 
 \item{alpha}{The type I error level. Default is 0.05.}
 
