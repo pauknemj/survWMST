@@ -7,7 +7,9 @@
 survdata <- function(n, lambda1, lambda2, censor = 0, piecewise = FALSE, diverge_time = NULL, erate = NULL, eperiod = NULL, end_study = NULL)
 }
 \arguments{
-\item{n}{The sample size in each trial arm.}
+\item{n0}{The sample size in the control arm.}
+
+\item{n1}{The sample size in the treatment arm.}
 
 \item{lambda1}{The rate of the exponential distribution in the first arm.}
 
