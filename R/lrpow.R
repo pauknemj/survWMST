@@ -2,7 +2,7 @@
 # lrpow (two-arm) -- hidden
 ################################
 
-lrpow<-function(survC, survT, eperiod = NA, end_study = NA, n, alpha, tau = NA){
+lrpow<-function(survC, survT, eperiod = NA, end_study = NA, n0, n1, alpha, tau = NA){
   myk1<-round(eperiod, 3)
   myk2<-round(end_study - eperiod, 3)
   tot<-myk1+myk2
@@ -15,7 +15,8 @@ lrpow<-function(survC, survT, eperiod = NA, end_study = NA, n, alpha, tau = NA){
   h_scl<-survC$h(tis+tot/(2*(L-1)))*tot/(L-1)
   
   nt<-nc<-rep(NA, L)
-  nt[1]<-nc[1]<-n/2
+  nt[1]<-n0
+  nc[1]<-n1
 
     for (i in 2:L){
       if (tis[i-1]<myk2){
