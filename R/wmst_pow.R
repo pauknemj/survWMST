@@ -39,7 +39,7 @@ wmst_pow <- function (survC, survT, censor = NA, eperiod, end_study, tau0, tau1,
 
   if (is.na(alpha))
     alpha <- ifelse(two.sided == T, 0.05, 0.025)
-  if (is.na(power) + is.na(n0) + is.na(n1) != 1)
+  if (!is.na(power) & (!is.na(n0) + !is.na(n1)) == 2)
     stop("One of n, power must be missing.")
   if (tau0 < 0)
     stop("Tau0 must be greater than 0.")
