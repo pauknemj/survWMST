@@ -46,22 +46,6 @@ The Greenwood plug-in estimator is used for the asymptotic variance.
 \details{
 For more details, please see the package vignette: \code{browseVignettes(package = "survWMST")}
 }
-\examples{
-#--- sample data ---#
-D=wmst2_sample_data()
-time=D$time
-status=D$status
-arm=D$arm
-tau=NULL
-x=D[,c(4,6,7)]
-#--- without covariates ----
-a=rmst2(time, status, arm, tau=10)
-print(a)
-plot(a, xlab="Years", ylab="Probability", density=60)
-#--- with covariates ----
-a=rmst2(time, status, arm, tau=10, covariates=x)
-print(a)
-}
 \references{
 Note to self: figure out what to place here! (Definitely give Hajime Uno, Lu Tian, Miki Horiguchi, Angel Cronin, Chakib Battioui, James Bell credit)
 }
