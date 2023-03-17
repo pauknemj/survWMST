@@ -70,7 +70,7 @@ wmst <- function (time, status, arm, tau0 = NULL, tau1 = NULL,
     }    
   }
   
-  #--case 2: only tau0 unspecified
+  #--case 2: only tau0 specified
   
   if (!is.null(tau0) & is.null(tau1)) {
     if (tau0 < 0) {
@@ -83,11 +83,11 @@ wmst <- function (time, status, arm, tau0 = NULL, tau1 = NULL,
     }    
     if (tau1 >= tau0) {
       NOTE = (paste("The truncation time, tau1, was not specified. Thus, the default tau1 (the minimum of the largest observed time on each of the two groups)", 
-                    round(tau_max, digits = 3), " is used, while tau0 was specified as: tau0 =", round(tau0, digits = 3)))
+                    round(tau1_max, digits = 3), " is used, while tau0 was specified as: tau0 =", round(tau0, digits = 3)))
     }
   }
   
-  #--case 3: only tau1 unspecified
+  #--case 3: only tau1 specified
   
   if (is.null(tau0) & !is.null(tau1)) {
     if (tau1 > tau1_max) {
